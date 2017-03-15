@@ -1,15 +1,15 @@
 $(document).ready(function(){
-  var Random=Math.floor(Math.random()*101+19)
+  var Random=Math.floor(Math.random()*101+19);
   // Selects a random number to be shown at the start of the game
   // Number should be should be between 19 - 120
   //
   $('#randomNumber').text(Random);
   // Appending random number to the randomNumber id in the html doc
   //
-  var num1= Math.floor(Math.random()*11+1)
-  var num2= Math.floor(Math.random()*11+1)
-  var num3= Math.floor(Math.random()*11+1)
-  var num4= Math.floor(Math.random()*11+1)
+  var num1= Math.floor(Math.random()*11+1);
+  var num2= Math.floor(Math.random()*11+1);
+  var num3= Math.floor(Math.random()*11+1);
+  var num4= Math.floor(Math.random()*11+1);
   // Setting up random numbers for each jewel
   // Random number has to be between 1 - 12
   // 
@@ -22,7 +22,7 @@ $(document).ready(function(){
 //resets the game
 function reset(){
   Random=Math.floor(Math.random()*101+19);
-  console.log(Random)
+  console.log(Random);
   $('#randomNumber').text(Random);
   num1= Math.floor(Math.random()*11+1);
   num2= Math.floor(Math.random()*11+1);
@@ -43,7 +43,7 @@ function loser(){
   alert ("Princess Zelda Is Not Pleased...");
   losses++;
   $('#numberLosses').text(losses);
-  reset()
+  reset();
 }
 //sets up click for jewels
 $('#one').on ('click', function(){
@@ -57,7 +57,7 @@ $('#one').on ('click', function(){
           else if ( userTotal > Random){
             loser();
           }   
-        })  
+        });  
 $('#two').on ('click', function(){
   userTotal = userTotal + num2;
   console.log("New userTotal= " + userTotal);
@@ -68,7 +68,7 @@ $('#two').on ('click', function(){
   else if ( userTotal > Random){
     loser();
   } 
-})  
+});  
 $('#three').on ('click', function(){
   userTotal = userTotal + num3;
   console.log("New userTotal= " + userTotal);
@@ -80,7 +80,7 @@ if (userTotal == Random){
 else if ( userTotal > Random){
   loser();
 } 
-})  
+});  
 $('#four').on ('click', function(){
   userTotal = userTotal + num4;
   console.log("New userTotal= " + userTotal);
